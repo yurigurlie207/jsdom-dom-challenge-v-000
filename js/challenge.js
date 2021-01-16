@@ -50,7 +50,7 @@ function myJSChallenge() {
       })
 
       pause.addEventListener("click",function(){
-        playing?(playing=!1,
+        playing?(playing=false,
                  clearInterval(interval),
                  this.innerText="resume"):
                  (playing=!0,interval=timer(),
