@@ -19,7 +19,8 @@ function myJSChallenge() {
     let minus=document.getElementById("minus"),
         plus=document.getElementById("plus"),
         heart=document.getElementById("heart"),
-        playing=true
+        playing=true,
+        commentForm=document.getElementsByTagName("form")[0];
 
     minus.addEventListener("click",function(){
           var a=document.getElementById("counter"),
@@ -31,7 +32,7 @@ function myJSChallenge() {
             var a=document.getElementById("counter"),
                 b=parseInt(a.innerText);
             a.innerText=b+1
-          })
+          }),
 
     heart.addEventListener("click",function(){
       var a=document.getElementById("counter"),
@@ -47,14 +48,14 @@ function myJSChallenge() {
         else(d=document.createElement("li")).setAttribute("data-num",b),
         d.innerHTML=b+" has been liked <span>1</span> time",
         c.appendChild(d)
-      })
+      }),
 
       pause.addEventListener("click",function(){
         playing?(playing=false,clearInterval(interval),this.innerText="resume"):(playing=true,interval=timer(),this.innerText="pause"),
         [].concat(_toConsumableArray(document.getElementsByTagName("button"))).forEach(function(a){
                                                                                         "pause"!==a.id&&(a.disabled=!playing)
                                                                                       }) // don't understand this yet
-        })
+        }),
 
         commentForm.addEventListener("submit",function(a){
           a.preventDefault();
