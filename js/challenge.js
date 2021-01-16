@@ -32,7 +32,7 @@ function myJSChallenge() {
             var a=document.getElementById("counter"),
                 b=parseInt(a.innerText);
             a.innerText=b+1
-          }),
+          })
 
     heart.addEventListener("click",function(){
       var a=document.getElementById("counter"),
@@ -48,7 +48,7 @@ function myJSChallenge() {
         else(d=document.createElement("li")).setAttribute("data-num",b),
         d.innerHTML=b+" has been liked <span>1</span> time",
         c.appendChild(d)
-      }),
+      })
 
       pause.addEventListener("click",function(){
         playing?(playing=false,clearInterval(interval),this.innerText="resume"):(playing=true,interval=timer(),this.innerText="pause"),
