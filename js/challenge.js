@@ -18,7 +18,8 @@ function myJSChallenge() {
 
     let minus=document.getElementById("minus"),
         plus=document.getElementById("plus"),
-        heart=document.getElementById("heart")
+        heart=document.getElementById("heart"),
+       playing=!0
 
     minus.addEventListener("click",function(){
           var a=document.getElementById("counter"),
