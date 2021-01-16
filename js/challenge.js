@@ -55,7 +55,7 @@ function myJSChallenge() {
         [].concat(_toConsumableArray(document.getElementsByTagName("button"))).forEach(function(a){
                                                                                         "pause"!==a.id&&(a.disabled=!playing)
                                                                                       }) // don't understand this yet
-        }),
+        })
 
         commentForm.addEventListener("submit",function(a){
           a.preventDefault();
