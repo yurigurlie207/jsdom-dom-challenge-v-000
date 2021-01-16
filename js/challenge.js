@@ -55,6 +55,14 @@ function myJSChallenge() {
                                                                                         "pause"!==a.id&&(a.disabled=!playing)
                                                                                       }) // don't understand this yet
         })
+
+        commentForm.addEventListener("submit",function(a){
+          a.preventDefault();
+          var b=this.children[0],c=b.value;
+              b.value="";
+              var d=document.querySelector(".comments"),e=document.createElement("p");
+            e.innerText=c,d.appendChild(e)
+          });
 }
 
 function _toConsumableArray(a){
