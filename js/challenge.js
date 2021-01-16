@@ -14,7 +14,7 @@ function myJSChallenge() {
       },1e3)
     }
 
-    timer()
+    let interval = timer()
 
     let minus=document.getElementById("minus"),
         plus=document.getElementById("plus"),
