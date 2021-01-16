@@ -50,7 +50,7 @@ function myJSChallenge() {
       })
 
       pause.addEventListener("click",function(){
-        playing?(playing=false,clearInterval(interval),this.innerText="resume"):(playing=true,interval=timer(),this.innerText="pause"),
+        playing?(playing=false,clearInterval(interval),this.innerText="resume"):(playing=true,interval=timer(),this.innerText="pause")
         [].concat(_toConsumableArray(document.getElementsByTagName("button"))).forEach(function(a){
         "pause"!==a.id&&(a.disabled=!playing)
       })
