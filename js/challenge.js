@@ -14,11 +14,13 @@ function myJSChallenge() {
       },1e3)
     }
 
-    timer()
+    let interval = timer()
 
     let minus=document.getElementById("minus"),
         plus=document.getElementById("plus"),
-        heart=document.getElementById("heart")
+        heart=document.getElementById("heart"),
+        playing=true,
+        commentForm=document.getElementsByTagName("form")[0];
 
     minus.addEventListener("click",function(){
           var a=document.getElementById("counter"),
@@ -48,6 +50,20 @@ function myJSChallenge() {
         c.appendChild(d)
       })
 
+      pause.addEventListener("click",function(){
+        playing?(playing=false,clearInterval(interval),this.innerText="resume"):(playing=true,interval=timer(),this.innerText="pause"),
+        [].concat(_toConsumableArray(document.getElementsByTagName("button"))).forEach(function(a){
+                                                                                        "pause"!==a.id&&(a.disabled=!playing)
+                                                                                      }) // don't understand this yet
+        })
+
+        commentForm.addEventListener("submit",function(a){
+          a.preventDefault();
+          var b=this.children[0],c=b.value;
+              b.value="";
+              var d=document.querySelector(".comments"),e=document.createElement("p");
+            e.innerText=c,d.appendChild(e)
+          });
 }
 
 function _toConsumableArray(a){
