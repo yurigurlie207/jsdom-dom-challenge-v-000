@@ -54,7 +54,7 @@ function myJSChallenge() {
                  clearInterval(interval),
                  this.innerText="resume"):
                  (playing=true,interval=timer(),
-                 this.innerText="pause")
+                 this.innerText="pause"))
                 //  [].concat(_toConsumableArray(document.getElementsByTagName("button"))).forEach(function(a){
                 //  "pause"!==a.id&&(a.disabled=!playing)
       })
